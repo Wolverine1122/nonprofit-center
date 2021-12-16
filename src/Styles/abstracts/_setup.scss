@@ -1,0 +1,20 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; //sets the width and height to include content, padding, and border
+}
+
+html {
+  font-family: $font-stack;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/*
+FONTS:
+Light 300
+Regular 400
+Bold 700
+*/
