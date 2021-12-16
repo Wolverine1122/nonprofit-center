@@ -5,7 +5,7 @@ import Search from './Pages/Search';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
 import NotFound from './Pages/NotFound';
-import './Styles/app.css'
+import './Styles/app.scss'
 
 function App() {
   return <Router>
