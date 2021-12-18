@@ -1,10 +1,11 @@
-import test from '../images/girl-study.png'
+import Lottie from 'react-lottie-player';
+import StudyingLottie from '../images/studying-lottie.json'
 
 function About() {
     return (
         <div className="about-us">
             <div className="lottie">
-                <img src={test} alt='children growing' />
+                <Lottie loop animationData={StudyingLottie} play style={{ width: 450, height: 450 }} />
             </div>
             <div className="stats-sidebar">
                 <h2>We are the #1 platform <br /> for nonprofits</h2>

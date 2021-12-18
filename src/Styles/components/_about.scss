@@ -2,19 +2,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "lottie stats-sidebar";
-  height: 100vh;
-  place-items: center;
+  align-items: center;
 
   .lottie {
     grid-area: lottie;
-
-    img {
-      width: 100%;
-    }
+    justify-self: start;
+    margin-bottom: 50px;
   }
 
   .stats-sidebar {
     grid-area: stats-sidebar;
+    justify-self: center;
     display: grid;
     row-gap: 15px;
 
