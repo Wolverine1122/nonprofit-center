@@ -1,5 +1,5 @@
 import Lottie from 'react-lottie-player';
-import StudyingLottie from '../images/studying-lottie.json'
+import StudyingLottie from '../images/studying-lottie.json';
 
 function About() {
     return (
