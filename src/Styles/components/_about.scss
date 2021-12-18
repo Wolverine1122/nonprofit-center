@@ -1,0 +1,29 @@
+.about-us {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "lottie stats-sidebar";
+  height: 100vh;
+  place-items: center;
+
+  .lottie {
+    grid-area: lottie;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .stats-sidebar {
+    grid-area: stats-sidebar;
+    display: grid;
+    row-gap: 15px;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: $orange;
+    }
+  }
+}

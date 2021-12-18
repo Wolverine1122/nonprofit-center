@@ -1,9 +1,24 @@
-h1 {
+h1,
+h2,
+h3 {
   font-weight: 700;
-  font-size: 250%;
   letter-spacing: 1px;
-  word-spacing: 3px;
   color: $navy;
+}
+
+h1 {
+  word-spacing: 3px;
+  font-size: 250%;
+}
+
+h2 {
+  word-spacing: 2px;
+  font-size: 200%;
+}
+
+h3 {
+  word-spacing: 1px;
+  font-size: 170%;
 }
 
 p {
