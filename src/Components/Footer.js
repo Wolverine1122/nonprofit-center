@@ -4,7 +4,7 @@ function Footer () {
             <div className='footer-socials'>
                 <ul>
                     <li>
-                        <a href="#"
+                        <a href="https://www.google.com/"
                         ><svg
                             viewBox="0 0 512 512"
                             fill="none"
@@ -25,7 +25,7 @@ function Footer () {
                         ></a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="https://www.google.com/"
                         ><svg
                             viewBox="0 0 512 512"
                             fill="none"
@@ -45,7 +45,7 @@ function Footer () {
                         ></a>
                     </li>
                     <li>
-                        <a href="#"
+                        <a href="https://www.google.com/"
                         ><svg
                             viewBox="0 0 512 512"
                             fill="none"
