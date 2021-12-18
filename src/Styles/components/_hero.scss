@@ -9,7 +9,7 @@ $hero-height: calc(100vh - #{$navbar-height}); // full height minus navbar
   padding-bottom: $navbar-height; //subtracting navbar after vertically centering items only for UI / eye-test
 
   .hero-longcopy {
-    padding-right: 50px;
+    padding-right: 80px;
 
     .description {
       margin-top: 15px;
@@ -29,4 +29,14 @@ $hero-height: calc(100vh - #{$navbar-height}); // full height minus navbar
       height: auto;
     }
   }
+}
+
+//TypeWriter Styling
+.Typewriter {
+  display: inline-block;
+  color: $orange;
+}
+
+.Typewriter__cursor {
+  color: $navy;
 }
