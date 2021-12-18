@@ -13,10 +13,12 @@ html {
 .container {
   display: grid;
   grid-template-columns: 1fr 1100px 1fr;
-  grid-template-areas: "left-edge navbar right-edge"
-                       "left-edge content right-edge"
-                       "left-edge footer right-edge";
+  grid-template-areas:
+    "left-edge navbar right-edge"
+    "left-edge content right-edge"
+    "left-edge footer right-edge";
   background-color: $cream;
+  color: $gray;
   padding: 10px 0 0;
 }
 

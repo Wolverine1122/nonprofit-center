@@ -1,0 +1,33 @@
+.btn {
+  display: inline-block;
+  padding: 9px 29px;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.3s, border 0.3s, color 0.3s;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.btn-full {
+  background-color: $navy;
+  color: $cream;
+  border: 1px solid $navy;
+}
+
+.btn-ghost {
+  border: 1px solid $navy;
+  color: $navy;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: $orange;
+  border: 1px solid $orange;
+  cursor: pointer;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  color: $cream;
+}

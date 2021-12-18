@@ -1,5 +1,10 @@
 @import "abstracts/variables";
+@import "abstracts/headings";
 @import "abstracts/setup";
+
+@import "components/button";
 @import "components/navbar";
+
 @import "pages/_home";
+
 @import "components/footer";

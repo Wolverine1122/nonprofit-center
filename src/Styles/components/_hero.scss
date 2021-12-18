@@ -1,0 +1,32 @@
+$navbar-height: 54px; // Named it so for simplicity. In fact, it is navbar height (44px) + container padding-top (10px)
+$hero-height: calc(100vh - #{$navbar-height}); // full height minus navbar
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: $hero-height;
+  align-items: center;
+  padding-bottom: $navbar-height; //subtracting navbar after vertically centering items only for UI / eye-test
+
+  .hero-longcopy {
+    padding-right: 50px;
+
+    .description {
+      margin-top: 15px;
+    }
+
+    button {
+      margin-top: 30px;
+    }
+  }
+
+  .hero-img {
+    display: grid;
+    justify-items: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

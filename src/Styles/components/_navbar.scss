@@ -1,33 +1,33 @@
 .navbar {
-    grid-area: navbar;
-    display: grid;
-    grid-template-columns: -webkit-max-content 1fr;
-    grid-template-columns: max-content 1fr;
-    grid-template-areas: "logo navbar-links";
-    align-items: center;
+  grid-area: navbar;
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-template-areas: "logo navbar-links";
+  align-items: center;
 
-    .logo {
-        grid-area: logo;
+  .logo {
+    grid-area: logo;
 
-        img {
-            height: 40px;
-            width: auto;
-        }
+    img {
+      height: 40px;
+      width: auto;
     }
+  }
 
-    .navbar-links {
-        grid-area: navbar-links;
-        justify-self: end;
+  .navbar-links {
+    grid-area: navbar-links;
+    justify-self: end;
 
-        a {
-            margin-left: 50px;
-            text-decoration: none;
-            color: $navy;
-            transition: color 0.3s;
+    a {
+      margin-left: 50px;
+      text-decoration: none;
+      color: $navy;
+      transition: color 0.3s;
 
-            &:hover {
-                color: $orange;
-            }
-        }
+      &:hover {
+        color: $orange;
+      }
     }
+  }
 }

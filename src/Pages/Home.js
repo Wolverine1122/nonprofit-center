@@ -1,7 +1,9 @@
+import Hero from '../Components/Hero'
+
 function Home() {
     return (
         <div className='homepage'>
-            <h1>Homepage</h1>
+            <Hero/>
         </div>
     )
 }
