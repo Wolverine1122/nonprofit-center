@@ -1,6 +1,16 @@
-import ScheduleImg from '../images/icons/schedule.svg';
-import RegisterImg from '../images/icons/register.svg';
-import SearchImg from '../images/icons/search.svg';
+import ProcessSteps from "./ProcessSteps";
+import TextProcessSteps from '../Texts/TextProcessSteps';
+
+function createProcessEntry(steps) {
+    return (
+        <ProcessSteps
+            key={steps.id}
+            step={steps.step}
+            alt={steps.alt}
+            img={steps.img}
+            description={steps.description} />
+    )
+}
 
 function Process() {
     return (
@@ -14,45 +24,7 @@ function Process() {
             </div>
 
             <div className="process-steps-row">
-                <div>
-                    <div className='process-img'>
-                        <img src={RegisterImg} alt='register' />
-                    </div>
-                    <div className="process-steps-text">
-                        <h3>Register</h3>
-                        <p>
-                            In publishing and graphic design, Lorem ipsum is a placeholder
-                            text commonly used to demonstrate the visual form of a document or
-                            a typeface without relying on meaningful content.
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <div className='process-img'>
-                        <img src={SearchImg} alt='search' />
-                    </div>
-                    <div className="process-steps-text">
-                        <h3>Search</h3>
-                        <p>
-                            In publishing and graphic design, Lorem ipsum is a placeholder
-                            text commonly used to demonstrate the visual form of a document or
-                            a typeface without relying on meaningful content.
-                        </p>
-                    </div>
-                </div>
-                <div>
-                    <div className='process-img'>
-                        <img src={ScheduleImg} alt='schedule' />
-                    </div>
-                    <div className="process-steps-text">
-                        <h3>Schedule</h3>
-                        <p>
-                            In publishing and graphic design, Lorem ipsum is a placeholder
-                            text commonly used to demonstrate the visual form of a document or
-                            a typeface without relying on meaningful content.
-                        </p>
-                    </div>
-                </div>
+                {TextProcessSteps.map(createProcessEntry)}
             </div>
         </div>
     )

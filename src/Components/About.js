@@ -1,5 +1,11 @@
 import Lottie from 'react-lottie-player';
 import StudyingLottie from '../images/studying-lottie.json';
+import Stats from './Stats';
+import TextStats from '../Texts/TextStats';
+
+function createStatsEntry(stats) {
+    return <Stats key={stats.id} number={stats.number} description={stats.description} />
+}
 
 function About() {
     return (
@@ -9,18 +15,7 @@ function About() {
             </div>
             <div className="stats-sidebar">
                 <h2>We are the #1 platform <br /> for nonprofits</h2>
-                <div>
-                    <h3>60,000+</h3>
-                    <p>users in the nation</p>
-                </div>
-                <div>
-                    <h3>4,000+</h3>
-                    <p>visits per month</p>
-                </div>
-                <div>
-                    <h3>10+</h3>
-                    <p>companies supporting us</p>
-                </div>
+                {TextStats.map(createStatsEntry)}
             </div>
         </div>
     )
