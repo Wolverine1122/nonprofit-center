@@ -1,6 +1,6 @@
 function ProcessSteps(props) {
     return (
-        <div>
+        <div className='process-step'>
             <div className='process-img'>
                 <img src={props.img} alt={props.alt} />
             </div>

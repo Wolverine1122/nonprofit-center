@@ -25,15 +25,25 @@
     grid-area: process-steps-row;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 70px;
+    column-gap: 50px;
     margin-top: 20px;
+
+    .process-step {
+      padding: 25px 40px;
+      border-radius: 15px;
+      box-shadow: 1px 1px 5px $orange-shadow;
+
+      &:hover {
+        box-shadow: 4px 4px 20px $orange-shadow;
+      }
+    }
 
     .process-img {
       display: grid;
       justify-content: center;
 
       img {
-        height: 50px;
+        height: 40px;
         width: auto;
       }
     }
