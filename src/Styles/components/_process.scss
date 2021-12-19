@@ -1,0 +1,48 @@
+.process-section {
+  display: grid;
+  grid-template-rows: repeat(2, -webkit-max-content);
+  grid-template-rows: repeat(2, max-content);
+  grid-template-areas:
+    "process-text"
+    "process-steps-row";
+  margin: 80px 0;
+
+  .process-text {
+    grid-area: process-text;
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      width: 60%;
+      margin: 20px 20% 30px;
+    }
+  }
+
+  .process-steps-row {
+    grid-area: process-steps-row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+
+    .process-img {
+      display: grid;
+      justify-content: center;
+
+      img {
+        height: 50px;
+        width: auto;
+      }
+    }
+
+    .process-steps-text {
+      margin-top: 20px;
+
+      h3 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
