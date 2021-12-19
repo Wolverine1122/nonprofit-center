@@ -1,10 +1,10 @@
 import ProcessSteps from "./ProcessSteps";
 import TextProcessSteps from '../Texts/TextProcessSteps';
 
-function createProcessEntry(steps) {
+function createProcessEntry(steps, index) {
     return (
         <ProcessSteps
-            key={steps.id}
+            key={index}
             step={steps.step}
             alt={steps.alt}
             img={steps.img}

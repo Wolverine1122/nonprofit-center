@@ -4,7 +4,6 @@ import SearchImg from '../images/icons/search.svg';
 
 const ProcessSteps = [
     {
-        id: 1,
         step: 'Register',
         alt: 'register',
         img: RegisterImg,
@@ -12,7 +11,6 @@ const ProcessSteps = [
     },
 
     {
-        id: 2,
         step: 'Search',
         alt: 'search',
         img: SearchImg,
@@ -20,7 +18,6 @@ const ProcessSteps = [
     },
 
     {
-        id: 3,
         step: 'Schedule',
         alt: 'schedule',
         img: ScheduleImg,

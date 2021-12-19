@@ -3,8 +3,8 @@ import StudyingLottie from '../images/studying-lottie.json';
 import Stats from './Stats';
 import TextStats from '../Texts/TextStats';
 
-function createStatsEntry(stats) {
-    return <Stats key={stats.id} number={stats.number} description={stats.description} />
+function createStatsEntry(stats, index) {
+    return <Stats key={index} number={stats.number} description={stats.description} />
 }
 
 function About() {
