@@ -5,7 +5,8 @@
   grid-template-areas:
     "process-text"
     "process-steps-row";
-  margin-top: 50px;
+  height: 100vh;
+  padding-top: 50px;
 
   .process-text {
     grid-area: process-text;
@@ -24,7 +25,8 @@
     grid-area: process-steps-row;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 20px;
+    column-gap: 70px;
+    margin-top: 20px;
 
     .process-img {
       display: grid;

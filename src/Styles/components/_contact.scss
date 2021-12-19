@@ -6,7 +6,6 @@
   grid-template-areas:
     "form address"
     "form call-us";
-  margin-top: 100px;
 
   h2 {
     margin-bottom: 20px;
@@ -56,7 +55,7 @@
         border-color: $navy;
         background-color: $cream;
         font-family: $font-stack;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 80%;
 
         &:focus {
