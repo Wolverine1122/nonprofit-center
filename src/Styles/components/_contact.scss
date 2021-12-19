@@ -1,0 +1,123 @@
+.contact {
+  grid-area: contact;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "form address"
+    "form call-us";
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .address,
+  .call-us {
+    padding-left: 200px;
+  }
+
+  .address {
+    grid-area: address;
+  }
+
+  .call-us {
+    grid-area: call-us;
+  }
+
+  .form-div {
+    grid-area: form;
+
+    .index-form {
+      display: grid;
+      grid-template-rows: repeat(5, -webkit-max-content);
+      grid-template-rows: repeat(5, max-content);
+      grid-template-areas:
+        "name-row"
+        "email-row"
+        "subject-row"
+        "message-row"
+        "submit-row";
+      row-gap: 20px;
+
+      input,
+      label,
+      textarea,
+      select {
+        display: block;
+        outline: 0;
+      }
+
+      input,
+      textarea,
+      select {
+        padding: 5px;
+        border-width: 0 0 2px;
+        border-color: $navy;
+        background-color: $cream;
+        font-family: $font-stack;
+        font-weight: 300;
+        font-size: 80%;
+
+        &:focus {
+          border-color: $orange;
+        }
+      }
+
+      textarea {
+        resize: none;
+        overflow: auto;
+        padding: 10px;
+      }
+    }
+
+    .name-row,
+    .email-row,
+    .subject-row,
+    .message-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-content: center;
+    }
+
+    .name-row {
+      grid-area: name-row;
+    }
+
+    .email-row {
+      grid-area: email-row;
+    }
+
+    .subject-row {
+      grid-area: subject-row;
+    }
+
+    .message-row {
+      grid-area: message-row;
+    }
+
+    .submit-row {
+      grid-area: submit-row;
+    }
+
+    /* Placeholders for different browsers*/
+    ::-webkit-input-placeholder {
+      color: $gray;
+    }
+
+    ::-moz-placeholder {
+      color: $gray;
+    }
+
+    :-ms-input-placeholder {
+      color: $gray;
+    }
+
+    ::-ms-input-placeholder {
+      color: $gray;
+    }
+
+    ::placeholder {
+      color: $gray;
+    }
+  }
+}
