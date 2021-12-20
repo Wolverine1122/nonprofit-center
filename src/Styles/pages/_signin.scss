@@ -1,0 +1,73 @@
+.sign-in-page {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-areas:
+    ". card ."
+    ". cues .";
+
+  .card,
+  .cues {
+    margin-top: 30px;
+  }
+
+  .card {
+    grid-area: card;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px $orange-shadow;
+    padding: 20px 100px 50px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .login-form {
+      display: grid;
+      justify-content: center;
+      grid-row-gap: 20px;
+
+      input,
+      .btn {
+        width: 400px;
+      }
+
+      input {
+        outline: 0;
+        padding: 10px;
+        font-family: $font-stack;
+        font-weight: 400;
+        border: 1.5px solid $gray;
+        border-radius: 10px;
+
+        &:focus {
+          border-color: $orange;
+        }
+      }
+
+      .btn {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .cues {
+    grid-area: cues;
+    display: grid;
+    grid-template-columns: repeat(2, -webkit-max-content);
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 200px;
+    justify-content: center;
+
+    a {
+      text-decoration: none;
+      color: $navy;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}
