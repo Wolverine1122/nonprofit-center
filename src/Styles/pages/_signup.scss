@@ -1,0 +1,73 @@
+.sign-up-page {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: 1fr -webkit-max-content 1fr;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-areas:
+    ". card ."
+    ". cues .";
+
+  .signup-form {
+    display: grid;
+    grid-template-rows: repeat(2, -webkit-max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+      "signup-form-input"
+      "signup-form-agreements";
+
+    .signup-form-input {
+      grid-area: signup-form-input;
+      display: grid;
+      justify-content: center;
+      grid-gap: 20px;
+      grid-template-columns: repeat(2, -webkit-max-content);
+      grid-template-columns: repeat(2, max-content);
+    }
+
+    .signup-form-button {
+      justify-self: center;
+
+      .btn {
+        margin: 30px 0 0;
+      }
+    }
+
+    .signup-form-agreements {
+      grid-area: signup-form-agreements;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .checkbox {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .agreement {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        align-items: center;
+      }
+    }
+
+    label,
+    input {
+      display: inline-block;
+    }
+
+    input {
+      width: 300px;
+    }
+
+    label {
+      font-size: 85%;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  }
+}
+
+.signup-card {
+  padding-bottom: 30px;
+}

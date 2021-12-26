@@ -5,7 +5,7 @@ import TextInfoCard from '../Texts/TextInfoCard';
 function createCardEntry(card, index) {
     return (
         <InfoCard
-            id={index}
+            key={index}
             class={card.class}
             title={card.title}
             details={card.details}
