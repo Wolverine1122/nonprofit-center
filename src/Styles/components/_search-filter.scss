@@ -1,0 +1,40 @@
+.search-filter-sidebar {
+  grid-area: search-filter-sidebar;
+  padding: 20px 40px;
+  display: grid;
+  row-gap: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: 1px 1px 2px $orange-shadow;
+  margin: 0;
+
+  input,
+  label {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  label {
+    font-size: 90%;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  input {
+    margin-right: 10px;
+  }
+
+  input[type="radio"]:checked + label {
+    color: $orange;
+  }
+
+  .filter-option {
+    display: grid;
+    row-gap: 5px;
+  }
+}

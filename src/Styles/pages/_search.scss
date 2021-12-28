@@ -1,0 +1,22 @@
+@import "../components/search-bar";
+@import "../components/search-filter";
+@import "../components/search-result";
+
+.search-page {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: -webkit-max-content 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas:
+    "search-bar search-bar"
+    "search-filter-sidebar search-results";
+  grid-gap: 30px;
+  padding-bottom: 30px;
+
+  .search-results {
+    display: grid;
+    row-gap: 20px;
+  }
+}
