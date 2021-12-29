@@ -2,7 +2,7 @@
   display: grid;
   box-shadow: 1px 1px 2px $orange-shadow;
   border-radius: 10px;
-  padding: 10px 15px;
+  padding: 20px 15px;
 
   &:hover {
     box-shadow: 4px 4px 20px $orange-shadow;
@@ -55,6 +55,22 @@
 
   .result-detailed {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-areas: "resources learning-attributes contact";
+    margin: 30px 0 0 90px;
+    justify-content: space-between;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        transition: color 0.3s;
+        font-size: 90%;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
   }
 }

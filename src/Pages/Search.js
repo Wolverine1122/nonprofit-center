@@ -11,7 +11,7 @@ function createResultEntry(result, index) {
             img={result.img}
             description={result.description}
             resources={result.resources}
-            // contact={result.contact}
+            contact={result.contact}
             learningAttributes={result.learningAttributes}
         />
     )

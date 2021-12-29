@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import DownArrow from '../images/icons/down-arrow.svg';
+import LearningAttributes from './LearningAttributes';
+import Resources from './Resources';
+import ResultContact from './ResultContact';
 
 function SearchResult(props) {
     const [detailed, setDisplayDetailed] = useState(false)
-    const [transform, setTransform] = useState(false)
+    const [transform, setTransform] = useState(false) //used for animating drop-down button
 
     function handleClick() {
         setDisplayDetailed(!detailed)
@@ -26,7 +29,7 @@ function SearchResult(props) {
                     </button>
                 </div>
             </div>
-            {detailed ? <ResultDetailed /> : null}
+            {detailed ? <ResultDetailed resources={props.resources} contact={props.contact} learningAttributes={props.learningAttributes} /> : null}
         </div>
     )
 }
@@ -34,17 +37,29 @@ function SearchResult(props) {
 function ResultDetailed(props) {
     return (
         <div className='result-detailed'>
-            <div className='Resources'>
+            <div className='resources'>
                 <h5>Resources</h5>
-                <p>{props.resources}</p>
-            </div>
-            <div className='contact'>
-                <h5>Contact</h5>
-                <p>{props.contact}</p>
+                <ul className='learning-resources'>
+                    {props.resources.map((resource, index) => (
+                        <Resources key={index} resource={resource} />
+                    ))}
+                </ul>
             </div>
             <div className='learning-attributes'>
                 <h5>Attributes</h5>
-                <p>{props.learningAttributes}</p>
+                <ul className='learning-attributes'>
+                    {props.learningAttributes.map((attribute, index) => (
+                        <LearningAttributes key={index} attribute={attribute} />
+                    ))}
+                </ul>
+            </div>
+            <div className='result-contact-section'>
+                <h5>Contact</h5>
+                <ul className='result-contacts'>
+                    {props.contact.map((contact, index) => (
+                        <ResultContact key={index} contact={contact} />
+                    ))}
+                </ul>
             </div>
         </div>
     )
