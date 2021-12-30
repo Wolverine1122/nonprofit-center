@@ -1,6 +1,6 @@
 function ResultContact(props) {
     return (
-        <li className='result-contact'>{props.contact}</li>
+        <li className='result-contact'><a href={props.contact}>{props.contact}</a></li>
     )
 }
 

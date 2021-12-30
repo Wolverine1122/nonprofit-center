@@ -70,6 +70,15 @@
         &:hover {
           color: $orange;
         }
+
+        a {
+          color: $navy;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $orange;
+          }
+        }
       }
     }
   }
