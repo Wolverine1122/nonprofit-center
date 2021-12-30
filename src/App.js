@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Search from './Pages/Search';
 import SignIn from './Pages/SignIn';
 import SignUp from './Pages/SignUp';
+import MapSearch from './Pages/MapSearch';
 import NotFound from './Pages/NotFound';
 
 //import permanent components
@@ -16,15 +17,16 @@ import './Styles/app.scss';
 function App() {
   return <div className='container'>
     <Router>
-      <NavBar/>
+      <NavBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='search' element={<Search />} />
         <Route path='sign-in' element={<SignIn />} />
         <Route path='sign-up' element={<SignUp />} />
+        <Route path='map-search' element={<MapSearch />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router >
   </div>
 }
