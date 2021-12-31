@@ -1,7 +1,9 @@
+import Map from '../Components/Map';
+
 function MapSearch() {
     return (
         <div className='map-search-page'>
-            <h1>MapSearch</h1>
+            <Map />
         </div>
     )
 }
