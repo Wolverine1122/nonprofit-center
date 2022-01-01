@@ -56,7 +56,7 @@ function SignUp() {
                     <Link to='/sign-in'>Already have an account?</Link>
                 </div>
                 <div>
-                    <a href='/map-search'>Need help?</a>
+                    <Link to='/map-search'>Need help?</Link>
                 </div>
             </div>
         </div>
