@@ -12,15 +12,15 @@ function Map() {
     };
 
     return (
-        <div style={{ height: '100vh', width: '100%' }}>
+        <div className='google-map'>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: process.env.REACT_APP_MAPS_API }}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
             >
                 <AnyReactComponent
-                    lat={40.7128}
-                    lng={74.0060}
+                    lat={27.947420}
+                    lng={-82.458778}
                     text="My Marker"
                 />
             </GoogleMapReact>

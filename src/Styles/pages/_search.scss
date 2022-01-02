@@ -1,6 +1,7 @@
 @import "../components/search-bar";
 @import "../components/search-filter";
 @import "../components/search-result";
+@import "../components/search-results";
 
 .search-page {
   grid-area: content;
@@ -14,9 +15,4 @@
     "search-filter-sidebar search-results";
   grid-gap: 30px;
   padding-bottom: 30px;
-
-  .search-results {
-    display: grid;
-    row-gap: 20px;
-  }
 }
