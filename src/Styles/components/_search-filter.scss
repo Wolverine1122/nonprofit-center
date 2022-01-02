@@ -1,5 +1,6 @@
 .search-filter-sidebar {
   grid-area: search-filter-sidebar;
+  height: 461px; // prefixing the sidebar so it doesn't stretch along with result cards
   padding: 20px 40px;
   display: grid;
   row-gap: 20px;
@@ -9,6 +10,8 @@
   user-select: none;
   box-shadow: 1px 1px 2px $orange-shadow;
   margin: 0;
+  position: sticky;
+  top: 0px;
 
   input,
   label {
