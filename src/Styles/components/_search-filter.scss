@@ -11,6 +11,7 @@
   box-shadow: 1px 1px 2px $orange-shadow;
   margin: 0;
   position: sticky;
+  position: -webkit-sticky; /* Safari */
   top: 0px;
 
   input,

@@ -1,14 +1,35 @@
 import GoogleMapReact from 'google-map-react';
+import TextSearchResults from '../Texts/TextSearchResults';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
+
+function createLocationEntry(location, index) {
+    return (
+        <AnyReactComponent
+            key={index}
+            lat={location.latitude}
+            lng={location.longitude}
+            text={location.name}
+        />
+    )
+}
+
+function createMapOptions(maps) {
+    return {
+        mapTypeControl: true,
+        // gestureHandling: 'greedy' 
+        // uncomment this to allow touch-screen users to navigate the map
+        // with one finger. Default is auto, which determines if greedy is necessary on the device
+    }
+}
 
 function Map() {
     const defaultProps = {
         center: {
-            lat: 40.7128,
-            lng: -74.0060
+            lat: 28.08382491090474,
+            lng: -82.41058214442934
         },
-        zoom: 11
+        zoom: 16
     };
 
     return (
@@ -17,12 +38,9 @@ function Map() {
                 bootstrapURLKeys={{ key: process.env.REACT_APP_MAPS_API }}
                 defaultCenter={defaultProps.center}
                 defaultZoom={defaultProps.zoom}
+                options={createMapOptions}
             >
-                <AnyReactComponent
-                    lat={27.947420}
-                    lng={-82.458778}
-                    text="My Marker"
-                />
+                {TextSearchResults.map(createLocationEntry)}
             </GoogleMapReact>
         </div>
     )
