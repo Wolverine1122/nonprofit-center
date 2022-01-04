@@ -1,15 +1,14 @@
 import GoogleMapReact from 'google-map-react';
 import TextSearchResults from '../Texts/TextSearchResults';
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import Marker from './Marker';
 
 function createLocationEntry(location, index) {
     return (
-        <AnyReactComponent
+        <Marker
             key={index}
             lat={location.latitude}
             lng={location.longitude}
-            text={location.name}
+            name={location.name}
         />
     )
 }

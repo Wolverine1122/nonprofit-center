@@ -1,0 +1,28 @@
+.marker {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-template-areas: "marker-icon org-name";
+  align-items: center;
+
+  .org-name {
+    grid-area: org-name;
+
+    p {
+      color: $navy;
+      font-weight: bold;
+      font-size: 120%;
+    }
+  }
+
+  button {
+    grid-area: marker-icon;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  .marker-icon {
+    height: 24px;
+    width: auto;
+  }
+}

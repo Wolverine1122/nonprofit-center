@@ -10,8 +10,8 @@ const SearchResults = [
         resources: ['Math', 'Economics', 'Arts & Humanities', 'Science', 'Computing', 'Test prep'],
         contact: ['https://www.khanacademy.org/', 'https://twitter.com/khanacademy', 'https://instagram.com/khanacademy'],
         learningAttributes: ['self-paced', 'remote'],
-        latitude: 28.079384114455152,
-        longitude: -82.42167411255387
+        latitude: 28.079128890780996,
+        longitude: -82.42052497506236
     },
 
     {
