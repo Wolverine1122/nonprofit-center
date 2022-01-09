@@ -1,6 +1,7 @@
 import GoogleMapReact from 'google-map-react';
 import TextSearchResults from '../Texts/TextSearchResults';
 import Marker from './Marker';
+import useGeolocation from '../Custom Hooks/useGetLocation';
 
 function createLocationEntry(location, index) {
     return (
@@ -23,20 +24,17 @@ function createMapOptions(maps) {
 }
 
 function Map() {
-    const defaultProps = {
-        center: {
-            lat: 28.08382491090474,
-            lng: -82.41058214442934
-        },
-        zoom: 16
-    };
+    const geoLoc = useGeolocation({
+        lat: 40.7128,
+        lng: -74.0060
+    })
 
     return (
         <div className='google-map'>
             <GoogleMapReact
                 bootstrapURLKeys={{ key: process.env.REACT_APP_MAPS_API }}
-                defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
+                center={geoLoc.location}
+                defaultZoom={10}
                 options={createMapOptions}
             >
                 {TextSearchResults.map(createLocationEntry)}
