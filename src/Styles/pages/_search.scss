@@ -5,14 +5,27 @@
 
 .search-page {
   grid-area: content;
-  display: grid;
-  grid-template-columns: -webkit-max-content 1fr;
-  grid-template-columns: max-content 1fr;
-  grid-template-rows: -webkit-max-content 1fr;
-  grid-template-rows: max-content 1fr;
-  grid-template-areas:
-    "search-bar search-bar"
-    "search-filter-sidebar search-results";
-  grid-gap: 30px;
-  padding-bottom: 30px;
+
+  .search-main {
+    display: grid;
+    grid-template-columns: -webkit-max-content 1fr;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: -webkit-max-content 1fr;
+    grid-template-rows: max-content 1fr;
+    grid-template-areas:
+      "search-bar search-bar"
+      "search-filter-sidebar search-results";
+    grid-gap: 30px;
+  }
+}
+
+.note-to-user {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  a {
+    color: $orange;
+  }
 }

@@ -2,34 +2,37 @@
 
 .map-search-page {
   grid-area: content;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 500px 1fr;
-  margin-top: 30px;
-  box-shadow: 1px 1px 2px $orange-shadow;
-  border-radius: 10px;
 
-  .search-results {
-    overflow-y: auto;
-    border-radius: 10px 0 0 10px;
+  .search-and-map {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    margin-top: 30px;
+    box-shadow: 1px 1px 2px $orange-shadow;
+    border-radius: 10px;
 
-    .search-result {
-      border-radius: 0;
+    .search-results {
+      overflow-y: auto;
+      border-radius: 10px 0 0 10px;
 
-      .result-text {
-        font-size: 80%;
-      }
+      .search-result {
+        border-radius: 0;
 
-      .result-detailed {
-        grid-template-columns: repeat(1, max-content);
-        grid-template-areas:
-          "resources"
-          "learning-attributes"
-          "contact";
-        row-gap: 10px;
-
-        li {
+        .result-text {
           font-size: 80%;
+        }
+
+        .result-detailed {
+          grid-template-columns: repeat(1, max-content);
+          grid-template-areas:
+            "resources"
+            "learning-attributes"
+            "contact";
+          row-gap: 10px;
+
+          li {
+            font-size: 80%;
+          }
         }
       }
     }

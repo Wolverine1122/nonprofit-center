@@ -25,6 +25,7 @@ function createMapOptions(maps) {
 
 function Map() {
     const geoLoc = useGeolocation({
+        //use New York as default location
         lat: 40.7128,
         lng: -74.0060
     })
