@@ -11,7 +11,7 @@ function SearchBar() {
                 </select>
             </div>
             <div className='query'>
-                <form action='#' method='POST' className='search-query-form'>
+                <form action='#' className='search-query-form'>
                     <input
                         type='text'
                         placeholder='Search...'
