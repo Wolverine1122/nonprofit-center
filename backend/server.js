@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const connectionString = "mongodb+srv://Non-ProfitCenter:NonProfit2022@nonprofitdata.yom6d.mongodb.net/Premium_Data"
+const connectionString = "mongodb+srv://Non-ProfitCenter:NonProfit2022@nonprofitdata.yom6d.mongodb.net/Basic_Data"
 
 
 const app = express();
