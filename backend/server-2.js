@@ -11,6 +11,9 @@ app.use(cors());
 app.use(express.json());
 
 
+// Add path
+const path = require('path');
+
 const uri = process.env.ATLAS_URI;
 // console.log(process.env.MONGO_URI)
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
@@ -21,7 +24,7 @@ connection.once('open', () => {
 })
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html")
+  res.sendFile(path.join(__dirname, "../../frontend/public", "index.html")
 )});
  
 
