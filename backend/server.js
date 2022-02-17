@@ -1,12 +1,16 @@
+const connectionString = "mongodb+srv://Non-ProfitCenter:NonProfit2022@nonprofitdata.yom6d.mongodb.net/Basic_Data?retryWrites=true&w=majority"
 const express = require('express');
 const mongoose = require('mongoose');
-const connectionString = "mongodb+srv://Non-ProfitCenter:NonProfit2022@nonprofitdata.yom6d.mongodb.net/Premium_Data"
 
+// Routes
+const testRoute = require('./routes/test.js');
 
-const app = express();
+require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
+const app = express();
 
+app.use(testRoute);
 
 async function start() {
   try {
