@@ -1,6 +1,27 @@
+import { useState } from 'react'
 import SearchIcon from '../images/icons/search-icon.svg'
 
 function SearchBar() {
+    const [search, setSearch] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(search)
+
+        // send a post request to the server
+        // fetch('http://localhost:3000/search', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         search: search
+        //     })
+        // })
+        //     .catch(function (res) { console.log(res) })
+    }
+
     return (
         <div className='search-bar card'>
             <div className='categories'>
@@ -11,12 +32,14 @@ function SearchBar() {
                 </select>
             </div>
             <div className='query'>
-                <form action='#' className='search-query-form'>
+                <form onSubmit={handleSubmit} className='search-query-form'>
                     <input
                         type='text'
                         placeholder='Search...'
                         name='searchquery'
                         id='searchquery'
+                        value={search}
+                        onInput={(e) => setSearch(e.target.value)}
                     />
                     <button type='submit'>
                         <img src={SearchIcon} alt='search icon' />
