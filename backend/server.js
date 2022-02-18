@@ -1,19 +1,26 @@
 const connectionString = "mongodb+srv://Non-ProfitCenter:NonProfit2022@nonprofitdata.yom6d.mongodb.net/Basic_Data?retryWrites=true&w=majority"
 const express = require('express');
 const mongoose = require('mongoose');
-//const connectionString = process.env.MONGO_URI;
+const path = require('path');
 
 // Routes
-const testRoute = require('./routes/test.js');
+const searchRoute = require('./routes/search.js');
 
 // access .env
 require('dotenv').config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
+// Express
 const app = express();
 
-// Call the Routes
-app.use(testRoute);
+// Middleware
+app.use("/search", searchRoute);
+
+// Root route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/public", "index.html"));
+});
+
 
 // Main Function
 async function start() {
