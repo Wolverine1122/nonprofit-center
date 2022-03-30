@@ -5,6 +5,22 @@ import Marker from "./Marker";
 import useGeolocation from "../Custom Hooks/useGetLocation";
 
 function createLocationEntry(location, index) {
+  // if (location.type === "basic") {
+  //   const [lat, lng] = location.lat_long;
+  //   const organization_name = location.organization_name;
+  // } else if (location.type === "premium") {
+  //   const lat = location.data.summary.latitude;
+  //   const lng = location.data.summary.longitude;
+  //   const organization_name = location.data.summary.organization_name;
+  // }
+  // return (
+  //   <Marker
+  //     key={index}
+  //     lat={lat}
+  //     lng={lng}
+  //     name={organization_name}
+  //   />
+  // );
   return (
     <Marker
       key={index}
