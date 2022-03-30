@@ -35,7 +35,7 @@ function Map() {
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
   const geoLoc = useGeolocation({
     //use New York as default location
     lat: 40.7128,
