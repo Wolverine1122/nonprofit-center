@@ -8,7 +8,7 @@ function createLocationEntry(location, index) {
   // if (location.type === "basic") {
   //   const [lat, lng] = location.lat_long;
   //   const organization_name = location.organization_name;
-  // } else if (location.type === "premium") {
+  // } else if (location.data_type === "premium") {
   //   const lat = location.data.summary.latitude;
   //   const lng = location.data.summary.longitude;
   //   const organization_name = location.data.summary.organization_name;
