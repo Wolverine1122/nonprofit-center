@@ -5,30 +5,23 @@ import Marker from "./Marker";
 import useGeolocation from "../Custom Hooks/useGetLocation";
 
 function createLocationEntry(location, index) {
-  // if (location.type === "basic") {
-  //   const [lat, lng] = location.lat_long;
-  //   const organization_name = location.organization_name;
-  // } else if (location.data_type === "premium") {
-  //   const lat = location.data.summary.latitude;
-  //   const lng = location.data.summary.longitude;
-  //   const organization_name = location.data.summary.organization_name;
-  // }
+  if (location.data_type === "basic") {
+    const [lat, lng] = location.lat_long;
+    const organization_name = location.organization_name;
+  } else if (location.data_type === "premium") {
+    const lat = location.data.summary.latitude;
+    const lng = location.data.summary.longitude;
+    const organization_name = location.data.summary.organization_name;
+  }
+  return <Marker key={index} lat={lat} lng={lng} name={organization_name} />;
   // return (
   //   <Marker
   //     key={index}
-  //     lat={lat}
-  //     lng={lng}
-  //     name={organization_name}
+  //     lat={location.data.summary.latitude}
+  //     lng={location.data.summary.longitude}
+  //     name={location.data.summary.organization_name}
   //   />
   // );
-  return (
-    <Marker
-      key={index}
-      lat={location.data.summary.latitude}
-      lng={location.data.summary.longitude}
-      name={location.data.summary.organization_name}
-    />
-  );
 }
 
 function createMapOptions(maps) {
@@ -43,10 +36,10 @@ function createMapOptions(maps) {
 function Map() {
   const [locations, setLocations] = useState([]);
   useEffect(() => {
-    axios
-      .get("./premium_data.json")
-      .then((response) => {
-        setLocations(response.data);
+    fetch("/map-search")
+      .then((response) => response.json())
+      .then((data) => {
+        setLocations(data);
       })
       .catch((err) => {
         console.log(err);
