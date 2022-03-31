@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 // Routes
+const main = require('./routes/main.js')
 const searchRoute = require('./routes/search.js');
 const mapSearch = require('./routes/mapSearch.js');
 
@@ -15,14 +16,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Middleware
+app.use("/", main);
 app.use("/search", searchRoute);
 app.use("/map-search", mapSearch);
-
-// Root route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/public", "index.html"));
-});
-
 
 // Main Function
 async function start() {

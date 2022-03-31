@@ -1,6 +1,5 @@
 const {Router} = require("express");
 const router = Router();
-const path = require('path');
 const axios = require('axios');
 
 var data = JSON.stringify({
