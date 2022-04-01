@@ -3,11 +3,7 @@ const router = Router();
 const path = require('path');
 
 router.get('/', (req, res) => {
-  
+  res.sendFile(path.join(__dirname, "../../frontend/public", "index.html"));
 });
-
-router.post('/', (req, res) => {
-
-})
 
 module.exports = router;

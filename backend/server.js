@@ -1,10 +1,12 @@
-const connectionString = "mongodb+srv://Non-ProfitCenter:NonProfit2022@nonprofitdata.yom6d.mongodb.net/Basic_Data?retryWrites=true&w=majority"
+const connectionString = "mongodb+srv://Non-ProfitCenter2022:nonprofit22@cluster0.bggwc.mongodb.net/nonprofit-centerDb";
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 
 // Routes
+const main = require('./routes/main.js')
 const searchRoute = require('./routes/search.js');
+const mapSearch = require('./routes/mapSearch.js');
 
 // access .env
 require('dotenv').config();
@@ -14,13 +16,9 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 // Middleware
+app.use("/", main);
 app.use("/search", searchRoute);
-
-// Root route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/public", "index.html"));
-});
-
+app.use("/map-search", mapSearch);
 
 // Main Function
 async function start() {
@@ -35,4 +33,3 @@ async function start() {
 }
 
 start();
-
