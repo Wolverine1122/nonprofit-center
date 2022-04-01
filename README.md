@@ -6,7 +6,7 @@ This web project is proposed by Society of Competitive Programmers at USF. The p
 
 - Make sure to have `node` and `npm` installed. (Refers to links at the bottom)
 - Run `npm install` in both `backend` and `frontend ` folders separately.
-- `cd` into the frontend folder
+- `cd` into the `frontend` folder
 - run `npm start` from the terminal
 
 # Helpful Links
